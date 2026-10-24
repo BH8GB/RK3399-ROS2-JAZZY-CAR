@@ -2,7 +2,7 @@
 
 本工作区是 N10 麦克纳姆轮小车的上位机工程，配套下位机固件位于：
 
-`C:\Users\EricE\Downloads\ros2_car`
+`F:\ros2\ros2_car`
 
 两端通过 UART8 连接，共同完成底盘运动、里程计、建图和导航。上位机运行 ROS 2，负责运动学解算、串口协议、里程计、TF、N10 雷达接入、SLAM 和 Nav2。下位机运行 STM32H743VIT6 固件，负责电机闭环、编码器采集、陀螺仪读取和底盘安全保护。
 
@@ -79,7 +79,7 @@ my_robot_ws/
 
 固件工程结构、引脚表和云台协议见：
 
-`C:\Users\EricE\Downloads\ros2_car\README.md`
+`F:\ros2\ros2_car\README.md`
 
 ## 硬件连接
 
@@ -195,11 +195,11 @@ ls -l /dev/n10_lidar /dev/robot_base
 
 使用 Keil MDK-ARM 打开：
 
-`C:\Users\EricE\Downloads\ros2_car\MDK-ARM\H743VIT6.uvprojx`
+`F:\ros2\ros2_car\MDK-ARM\H743VIT6.uvprojx`
 
 编译后生成：
 
-`C:\Users\EricE\Downloads\ros2_car\MDK-ARM\H743VIT6\H743VIT6.hex`
+`F:\ros2\ros2_car\MDK-ARM\H743VIT6\H743VIT6.hex`
 
 连接调试器后下载固件。工程使用 ARMCC V5.06，切换编译器前先确认 HAL 和 FreeRTOS 的兼容性。
 
@@ -396,4 +396,4 @@ sudo usermod -aG dialout $USER
 ## 相关文档
 
 - 上位机包说明：`src/n10_slam_bringup/README.md`
-- 下位机固件说明：`C:\Users\EricE\Downloads\ros2_car\README.md`
+- 下位机固件说明：`F:\ros2\ros2_car\README.md`
